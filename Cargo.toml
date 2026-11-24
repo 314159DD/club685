@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+exclude = ["module"]
+members = ["crates/club685-core", "crates/club685-capture", "crates/club685-overlay", "crates/club685-probe", "crates/club685-render", "crates/club685-app"]
+
+[workspace.dependencies]
+windows = "0.62.2"
+
+[profile.release]
+opt-level = 3
+debug = false

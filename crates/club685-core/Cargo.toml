@@ -1,0 +1,10 @@
+[package]
+name = "club685-core"
+version = "0.1.0"
+edition = "2021"
+description = "Pixel analysis of rekordbox 6.8.5 frames: layout, playhead, markers, phase, master, Bars text, BPM mask"
+
+[dependencies]
+
+[dev-dependencies]
+png = "0.17"

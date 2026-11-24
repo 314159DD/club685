@@ -1,0 +1,10 @@
+[package]
+name = "club685-render"
+version = "0.1.0"
+edition = "2021"
+description = "Software rendering of the CLUB685 split view, central view and phase meters (no windows, no capture)"
+
+[dependencies]
+club685-core = { path = "../club685-core" }
+tiny-skia = "0.11"
+ab_glyph = "0.2"

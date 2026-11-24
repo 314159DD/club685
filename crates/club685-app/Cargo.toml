@@ -1,0 +1,43 @@
+[package]
+name = "club685-app"
+version = "0.2.0"
+edition = "2021"
+description = "CLUB685 for rekordbox 6.8.5: the Windows app"
+
+[lib]
+name = "club685_app"
+path = "src/lib.rs"
+
+[[bin]]
+name = "club685"
+path = "src/main.rs"
+
+[dependencies]
+club685-core = { path = "../club685-core" }
+club685-capture = { path = "../club685-capture" }
+club685-overlay = { path = "../club685-overlay" }
+club685-render = { path = "../club685-render" }
+tiny-skia = "0.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+windows = { workspace = true, features = [
+  "Win32_Foundation",
+  "Win32_Graphics_Dwm",
+  "Win32_Graphics_Gdi",
+  "Win32_Security",
+  "Win32_System_DataExchange",
+  "Win32_System_Diagnostics_ToolHelp",
+  "Win32_System_LibraryLoader",
+  "Win32_System_Memory",
+  "Win32_System_Ole",
+  "Win32_System_Performance",
+  "Win32_System_Threading",
+  "Win32_UI_HiDpi",
+  "Win32_UI_Input_KeyboardAndMouse",
+  "Win32_UI_Shell",
+  "Win32_UI_WindowsAndMessaging",
+] }
+
+[dev-dependencies]
+png = "0.17"
